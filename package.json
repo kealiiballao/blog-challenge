@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kealiiballao/blog-challenge/issues"
   },
-  "homepage": "https://github.com/kealiiballao/blog-challenge#readme"
+  "homepage": "https://github.com/kealiiballao/blog-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
