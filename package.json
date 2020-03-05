@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/kealiiballao/blog-challenge#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1"
   }
 }
