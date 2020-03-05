@@ -1,0 +1,22 @@
+{
+  "name": "blog-challenge",
+  "version": "1.0.1",
+  "description": "modify as needed",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kealiiballao/blog-challenge.git"
+  },
+  "author": "Kealii Ballao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kealiiballao/blog-challenge/issues"
+  },
+  "homepage": "https://github.com/kealiiballao/blog-challenge#readme"
+}
