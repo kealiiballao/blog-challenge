@@ -23,10 +23,11 @@ app.get("/", function(req, res) {
   let startingContent = homeStartingContent;
   res.render("home", { textContent: startingContent, posts: posts });
 });
-//Render the post page.
+
 app.get("/post", function(req, res) {
   res.render("post");
 });
+
 app.get("/about", function(req, res) {
   let startingContent = aboutStartingContent;
   res.render("about", { textContent: startingContent });
@@ -46,7 +47,16 @@ app.post("/compose", function(req, res) {
   posts.push(post);
   res.redirect("/");
 });
-
+app.get("/posts/:postName", function(req, res) {
+  const reqTitle = req.params.postName;
+  posts.forEach(function(post) {
+    const storedTitle = post.title;
+   if (storedTitle === reqTitle){console.log("match found")}else{
+    console.log("match not found");
+  }
+  
+  });
+});
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
