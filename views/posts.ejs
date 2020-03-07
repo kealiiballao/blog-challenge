@@ -1,0 +1,8 @@
+<%- include('partials/header') -%> 
+<h1>Posts</h1>
+<% let postList =posts %>
+<% postList.forEach(function(post){ %>
+<h1><%= post.title; %></h1>
+<p><%= post.content; %></p>
+<% });%>
+<%- include('partials/footer') -%> 
