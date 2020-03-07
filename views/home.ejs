@@ -1,5 +1,11 @@
 <%- include('partials/header') -%> 
 <h1>Home</h1>
 <p><%= textContent %></p>
-<h1></h1>
+<% let postList =posts %>
+<% postList.forEach(function(post){ %>
+    <h1><%= post.title; %></h1>
+    <p><%= post.content; %></p>
+<% });%>
+     
+
 <%- include('partials/footer') -%> 

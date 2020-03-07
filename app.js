@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const http = require("http")
+const http = require("http");
 let posts = [];
 const homeStartingContent =
   "Home Page: Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
@@ -21,8 +21,7 @@ app.use(express.static("public"));
 //Render the home page.
 app.get("/", function(req, res) {
   let startingContent = homeStartingContent;
-  res.render("home", {textContent: startingContent});
-  console.log(posts);
+  res.render("home", { textContent: startingContent, posts: posts });
 });
 //Render the post page.
 app.get("/post", function(req, res) {
@@ -30,14 +29,14 @@ app.get("/post", function(req, res) {
 });
 app.get("/about", function(req, res) {
   let startingContent = aboutStartingContent;
-    res.render("about",{textContent:startingContent});
+  res.render("about", { textContent: startingContent });
 });
 app.get("/contact", function(req, res) {
   let startingContent = contactStartingContent;
-    res.render("contact",{textContent:startingContent});
+  res.render("contact", { textContent: startingContent });
 });
 app.get("/compose", function(req, res) {
-      res.render("compose");
+  res.render("compose");
 });
 app.post("/compose", function(req, res) {
   const post = {
@@ -45,7 +44,7 @@ app.post("/compose", function(req, res) {
     content: req.body.postContent
   };
   posts.push(post);
-  res.redirect("/")
+  res.redirect("/");
 });
 
 app.listen(3000, function() {
